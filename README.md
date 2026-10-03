@@ -7,9 +7,9 @@ A modern Android application showcasing Jetpack Compose UI, Navigation, and Clea
 ## 📱 Features
 
 - **Modules Dashboard**: A responsive 2-column grid created with `LazyVerticalGrid` showcasing available learning modules.
-- **Hello Module**: A dedicated screen module displaying a custom greeting interface with back navigation.
+- **Basic Layout Module**: A dedicated screen module displaying a basic layout interface with back navigation.
 - **Hello World Module**: A dedicated screen module showcasing an interactive Hello World UI with back navigation.
-- **Modular Navigation**: Built using Jetpack Navigation Compose with type-safe route management.
+- **Modular Navigation**: Built using Jetpack Navigation Compose with route management.
 
 ---
 
@@ -23,17 +23,21 @@ com.example.jetpackcomposelearning
 ├── model
 │   └── ModuleItem.kt                     # Data model for module grid cards
 ├── navigation
-│   └── NavRoutes.kt                      # Centralized navigation route definitions
+│   └── NavRoutes.kt                      # Centralized navigation route constants
 ├── modules                               # Feature modules
-│   ├── hello
-│   │   └── HelloScreen.kt                # Hello Screen UI module
+│   ├── buildingBasicLayout
+│   │   └── BasicLayoutScreen.kt          # Basic Layout UI module (HelloScreen)
 │   └── helloworld
 │       └── HelloWorldScreen.kt           # Hello World UI module
 └── ui
-    └── grid
-        ├── GridViewScreen.kt             # Main Grid Dashboard & NavHost container
-        └── components
-            └── GridModuleCard.kt         # Reusable card UI component for grid items
+    ├── grid
+    │   ├── GridViewScreen.kt             # Main Grid Dashboard & NavHost container
+    │   └── components
+    │       └── GridModuleCard.kt         # Reusable card UI component for grid items
+    └── theme
+        ├── Color.kt                      # Color definitions
+        ├── Theme.kt                      # MaterialTheme setup
+        └── Type.kt                       # Typography definitions
 ```
 
 ---
@@ -42,9 +46,9 @@ com.example.jetpackcomposelearning
 
 - **Language**: Kotlin
 - **UI Framework**: Jetpack Compose (Material 3)
-- **Navigation**: Navigation Compose
+- **Navigation**: Navigation Compose (`androidx.navigation:navigation-compose`)
 - **Build System**: Gradle with Version Catalogs (`libs.versions.toml`)
-- **Compatibility**: Android SDK 24 (Min) to SDK 35+ (Target)
+- **Compatibility**: Android SDK 24 (Min) to SDK 37 (Target)
 
 ---
 
@@ -54,7 +58,6 @@ com.example.jetpackcomposelearning
    ```bash
    git clone <repository-url>
    ```
-2. Open the project in **Android Studio** (Ladybug / Jellyfish or newer).
+2. Open the project in **Android Studio**.
 3. Let Gradle sync automatically.
-4. Run the app on an Android Emulator or connected device (`Run > Run 'app'`).
-  
+4. Run the app on an Android Emulator or connected physical device (`Run > Run 'app'`).
