@@ -16,6 +16,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+
+
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -23,18 +25,18 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.jetpackcomposelearning.model.ModuleItem
-import com.example.jetpackcomposelearning.modules.hello.HelloScreen
+import com.example.jetpackcomposelearning.modules.buildingBasicLayout.BasicLayoutWidget
 import com.example.jetpackcomposelearning.modules.helloworld.HelloWorldScreen
 import com.example.jetpackcomposelearning.navigation.NavRoutes
 import com.example.jetpackcomposelearning.ui.grid.components.GridModuleCard
 
 val sampleModules = listOf(
     ModuleItem(
-        id = "hello",
-        title = "Hello Screen",
-        description = "Go to Hello Screen",
+        id = "basic_layout_screen",
+        title = "Basic Layout Screen",
+        description = "Go to Basic Layout Screen",
         icon = Icons.Default.Face,
-        route = NavRoutes.HELLO
+        route = NavRoutes.BASIC_LAYOUT_WIDGET
     ),
     ModuleItem(
         id = "hello_world",
@@ -61,8 +63,8 @@ fun GridViewScreen() {
                 }
             )
         }
-        composable(NavRoutes.HELLO) {
-            HelloScreen(
+        composable(NavRoutes.BASIC_LAYOUT_WIDGET) {
+            BasicLayoutWidget(
                 onBackClick = {
                     navController.popBackStack()
                 }

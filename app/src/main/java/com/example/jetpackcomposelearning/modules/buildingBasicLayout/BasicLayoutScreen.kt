@@ -1,4 +1,4 @@
-package com.example.jetpackcomposelearning.modules.hello
+package com.example.jetpackcomposelearning.modules.buildingBasicLayout
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -26,13 +26,13 @@ import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HelloScreen(
+fun BasicLayoutWidget(
     onBackClick: () -> Unit
 ) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Hello Module") },
+                title = { Text("Building Basic Layout") },
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
                         Icon(
