@@ -7,7 +7,8 @@ A modern Android application showcasing Jetpack Compose UI, Navigation, and Clea
 ## 📱 Features
 
 - **Modules Dashboard**: A responsive 2-column grid created with `LazyVerticalGrid` showcasing available learning modules.
-- **Basic Layout Module**: A dedicated screen module displaying a basic layout interface with back navigation.
+- **Basic Layout Module**: A dedicated screen module (`BasicLayoutWidget`) displaying a basic layout interface with gesture click navigation.
+- **Image View Screen**: A nested sub-screen (`ImageViewScreen`) navigated directly from the Basic Layout Screen via tap gestures.
 - **Hello World Module**: A dedicated screen module showcasing an interactive Hello World UI with back navigation.
 - **Modular Navigation**: Built using Jetpack Navigation Compose with route management.
 
@@ -26,7 +27,8 @@ com.example.jetpackcomposelearning
 │   └── NavRoutes.kt                      # Centralized navigation route constants
 ├── modules                               # Feature modules
 │   ├── buildingBasicLayout
-│   │   └── BasicLayoutScreen.kt          # Basic Layout UI module (HelloScreen)
+│   │   ├── BasicLayoutScreen.kt          # Basic Layout UI module (BasicLayoutWidget)
+│   │   └── ImageViewScreen.kt            # Image View UI screen (Navigated from BasicLayoutWidget)
 │   └── helloworld
 │       └── HelloWorldScreen.kt           # Hello World UI module
 └── ui
