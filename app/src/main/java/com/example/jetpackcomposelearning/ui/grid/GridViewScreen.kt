@@ -16,8 +16,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
-
-
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -26,6 +24,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.jetpackcomposelearning.model.ModuleItem
 import com.example.jetpackcomposelearning.modules.buildingBasicLayout.BasicLayoutWidget
+import com.example.jetpackcomposelearning.modules.buildingBasicLayout.ImageViewScreen
 import com.example.jetpackcomposelearning.modules.helloworld.HelloWorldScreen
 import com.example.jetpackcomposelearning.navigation.NavRoutes
 import com.example.jetpackcomposelearning.ui.grid.components.GridModuleCard
@@ -46,7 +45,6 @@ val sampleModules = listOf(
         route = NavRoutes.HELLO_WORLD
     )
 )
-
 @Composable
 fun GridViewScreen() {
     val navController = rememberNavController()
@@ -67,8 +65,14 @@ fun GridViewScreen() {
             BasicLayoutWidget(
                 onBackClick = {
                     navController.popBackStack()
+                },
+                onNavigateToImage = {
+                    navController.navigate(NavRoutes.IMAGE_VIEW_PAGE)
                 }
             )
+        }
+        composable(NavRoutes.IMAGE_VIEW_PAGE) {
+            ImageViewScreen()
         }
         composable(NavRoutes.HELLO_WORLD) {
             HelloWorldScreen(
