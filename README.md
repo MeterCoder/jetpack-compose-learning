@@ -1,16 +1,37 @@
 # Jetpack Compose Learning
 
-A modern Android application showcasing Jetpack Compose UI, Navigation, and Clean Architecture modular design principles.
+A modern, production-grade Android application showcasing Jetpack Compose UI, Navigation, and Clean Architecture modular design principles.
 
 ---
 
-## 📱 Features
+## 📱 Modules & Demos
 
-- **Modules Dashboard**: A responsive 2-column grid created with `LazyVerticalGrid` showcasing available learning modules.
-- **Basic Layout Module**: A dedicated screen module (`BasicLayoutWidget`) displaying a basic layout interface with gesture click navigation.
-- **Image View Screen**: A nested sub-screen (`ImageViewScreen`) navigated directly from the Basic Layout Screen via tap gestures.
-- **Hello World Module**: A dedicated screen module showcasing an interactive Hello World UI with back navigation.
-- **Modular Navigation**: Built using Jetpack Navigation Compose with route management.
+### 1. Modules Dashboard
+- A responsive 2-column grid built using `LazyVerticalGrid`.
+- Dynamic module cards routing to individual learning features.
+
+| Dashboard Grid View |
+| :---: |
+| *(Add screenshot in `docs/media/dashboard.png`)* |
+
+---
+
+### 2. Building Basic Layout & Image View Screen
+- **`BasicLayoutWidget`**: Demonstrates layout components and gesture detection (`Modifier.clickable`).
+- **`ImageViewScreen`**: Sub-screen navigated seamlessly on tap gestures.
+
+| Basic Layout Screen | Image View Screen |
+| :---: | :---: |
+| *(Add screenshot in `docs/media/basic_layout.png`)* | *(Add screenshot in `docs/media/image_view.png`)* |
+
+---
+
+### 3. Hello World Module
+- Showcases custom text styling and TopAppBar back navigation.
+
+| Hello World Screen |
+| :---: |
+| *(Add screenshot in `docs/media/hello_world.png`)* |
 
 ---
 
