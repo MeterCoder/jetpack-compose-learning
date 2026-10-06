@@ -72,7 +72,9 @@ fun GridViewScreen() {
             )
         }
         composable(NavRoutes.IMAGE_VIEW_PAGE) {
-            ImageViewScreen()
+            ImageViewScreen(
+                onBackClick = { navController.popBackStack() }
+            )
         }
         composable(NavRoutes.HELLO_WORLD) {
             HelloWorldScreen(
